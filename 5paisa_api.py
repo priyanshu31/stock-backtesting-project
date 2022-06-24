@@ -14,10 +14,6 @@ t1 = time.time()
 email = config('5PAISA_EMAIL')
 pwd = config('5PAISA_PASSWORD')
 dob = config('5PAISA_DOB')
-# app_name = config('APP_NAME')
-# app_source = config('APP_SOURCE')
-# user_id = config('USER_ID')
-# app_password = config('app_password')
 
 cred = {
     "APP_NAME": config('APP_NAME'),
