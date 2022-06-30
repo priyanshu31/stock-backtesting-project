@@ -41,7 +41,7 @@ scripcode = json_scripcode_data[stock_name]['Scripcode']
 
 # Data Fetching and Storing #
 
-df=pandas.DataFrame(client.historical_data('N','C',scripcode,'5m','2021-11-24','2022-04-25'))
+df=pandas.DataFrame(client.historical_data('N','C',scripcode,'1d','2020-01-01','2022-06-30'))
 print(df)
 
 df.to_csv(f"./Api_Fetched_Data/{stock_name}_fetched_data.csv")
@@ -52,9 +52,10 @@ print('Your API fetching took', t2 - t1, 's to execute')
 
 # # RSI Backtest #
 
-# RSI_Calculater.calculate_RSI(stock_name)
-# Swing_Backtest_RSI.start_backtest(stock_name)
+RSI_Calculater.calculate_RSI(stock_name)
+Swing_Backtest_RSI.start_backtest(stock_name)
 # Intraday_Backtest_RSI.start_backtest(stock_name)
+# print('\n')
 
 # # RSI Backtest #
 
@@ -63,8 +64,9 @@ print('Your API fetching took', t2 - t1, 's to execute')
 small_timeperiod = 20
 large_timeperiod = 50
 
-EMA_Calculater.calculate_EMA(stock_name, small_timeperiod, large_timeperiod)
-Intraday_Backtest_EMA.start_backtest(stock_name, small_timeperiod, large_timeperiod)
+# EMA_Calculater.calculate_EMA(stock_name, small_timeperiod, large_timeperiod)
+# Intraday_Backtest_EMA.start_backtest(stock_name, small_timeperiod, large_timeperiod)
+# print('\n')
 
 # EMA Backtest #
 

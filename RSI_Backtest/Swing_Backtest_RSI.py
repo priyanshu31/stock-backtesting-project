@@ -13,11 +13,11 @@ def start_backtest(stock_name):
     backtest_results = []
     
     long_position = False
-    oversold_rsi_value = 10
+    oversold_rsi_value = 30
     intial_amount = 10000
     
-    stoploss_percentage = 0.995
-    target_percentage = 1.01
+    stoploss_percentage = 0.96
+    target_percentage = 1.08
     stoploss = None
     target = None
     previous_rsi = None
@@ -58,10 +58,7 @@ def start_backtest(stock_name):
             total_trades = total_trades + 1
             long_position = True
             
-        if long_position and target <= float(row['High']):
-            
-            stoploss = float(row['High']) * 0.995
-            target = stoploss * target_percentage
+            continue
             
         if long_position and stoploss >= float(row['Low']):
             
@@ -95,6 +92,15 @@ def start_backtest(stock_name):
             backtest_results.append(trade)
             trade = None
             long_position = False
+            
+            continue
+        
+        if long_position and target <= float(row['High']):
+            
+            stoploss = float(row['High']) * stoploss_percentage
+            target = stoploss * target_percentage
+            
+            continue
         
         previous_rsi = rsi
      
