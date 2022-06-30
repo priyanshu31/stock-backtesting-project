@@ -1,2 +1,0 @@
-buytime,selltime,buyprice,sellprice,quantity,buyvalue,sellvalue,opening_balance,closing_balance,pnl,charges,success
-2022-04-19T15:20:00,2022-04-20T09:15:00,3447.4,3486.7780000000002,2,6894.8,6973.5560000000005,10000,10062.24280982724,62.24280982724031,16.51319017276,True
