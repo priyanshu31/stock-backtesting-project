@@ -1,6 +1,4 @@
 .env
-/Api_Fetched_Data/**.csv
-/RSI_Backtest/Data_with_RSI/**.csv
-/RSI_Backtest/Backtest_Results/**/**.csv
-/EMA_Backtest/Data_with_EMA/**.csv
-/EMA_Backtest/Backtest_Results/**/**.csv
+/**/**/**/**.csv
+/**/**/**.csv
+/**/**.csv
